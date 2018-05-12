@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dev Ask</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-default sin-margen-inferior" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="navbar-header">
+                            <a href="" class="navbar-brand titulo">DevAsk</a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if not user %}
+                        <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                    <strong>Menu</strong>
+                                    <span class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                        <li><a href="/auth/facebook">Log con Facebook</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="/auth/twitter">Log con twittter</a></li>
+                                    </ul>
+                            </li>
+                        {% else %}
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="{{url_foto}}" alt"..."
+                                    class="img-rounded" width="32px" height="32px">
+                                    <strong>{{user}}</strong>
+                                    <span class="glyphicon-chevron-down"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/detalle">Chat</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/logout">AlaChingada</a></li>
+                                </ul>
+                            </li>
+                        {% endif %}
+                        
+                        
+                    
+                        </ul>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    {% block js %}
+    {% endblock %}
+</body>
+</html>

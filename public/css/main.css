@@ -1,0 +1,27 @@
+/*
+body {background-color: #e6e6e6;}
+*/
+body{
+    background-color: #eee;
+}
+.head-title{
+    color:white;
+    font-size: 2em;
+}
+.border{
+    list-style: none;
+    margin: 10px 10px 0 0;
+    border-bottom: 1px dotted #b3a9a9;
+    padding-bottom: 10px;
+}
+.jumbotron{
+    background-image: url(../img/pattern2.png);
+}
+.sin-margen-inferior{
+    margin-bottom: 0;
+}
+.titulo{
+    color:#11a9cc;
+    font-weight: bold;
+    size:1.5em;
+}
