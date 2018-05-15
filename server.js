@@ -37,8 +37,8 @@ require('./app/controllers/user')(server);
 
 //connections
 require('./app/connections/facebook')(server);
-require('./app/connections/twitter')(server);
+//require('./app/connections/twitter')(server);
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8081;
 server.listen(port);
 
