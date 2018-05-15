@@ -39,4 +39,6 @@ require('./app/controllers/user')(server);
 require('./app/connections/facebook')(server);
 require('./app/connections/twitter')(server);
 
-server.listen(8000);
+var port = process.env.PORT || 8080;
+server.listen(port);
+

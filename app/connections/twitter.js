@@ -3,8 +3,8 @@ var passport = require('passport'),
 
 var twitterConnection = function (server) {
     passport.use(new twitterStrategy({
-        cconsumerKey: '',
-        consumerSecret: '',
+        consumerKey: '00000000',
+        consumerSecret: '0000000000',
         callbackURL: 'http://locahost:8000/auth/twitter/callback',
         resave: true,
         saveUninitialized: true
