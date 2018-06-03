@@ -15,7 +15,7 @@ var facebookConnection = function (server) {
 
     server.get('/auth/facebook/callback',
         passport.authenticate('facebook', {
-            successRedirect: '/',
+            successRedirect: '/extra-data',
             failureRedirect: '/error'
         }
         )

@@ -15,7 +15,7 @@ var twitterConnection = function (server) {
 
     server.get('/auth/twitter/callback',
         passport.authenticate('twitter', {
-            successRedirect: '/',
+            successRedirect: '/extra-data',
             failureRedirect: '/error'
         }
         )

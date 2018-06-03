@@ -2,7 +2,8 @@ var express = require('express'),
     swig = require('swig'),
     passport = require('passport'),
     session = require('express-session'),
-    cookieParser = require('cookie-parser');
+    cookieParser = require('cookie-parser'),
+    bodyParser = require('body-parser');
 var server = express();
 
 swig.setDefaults({
@@ -10,6 +11,8 @@ swig.setDefaults({
 })
 
 //config de express
+server.use(bodyParser.urlencoded({extended:true}));
+server.use(bodyParser.json());
 server.use(cookieParser());
 server.use(session({secret : 'mi clave'}));
 
